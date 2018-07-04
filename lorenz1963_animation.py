@@ -94,6 +94,6 @@ anim = animation.FuncAnimation(fig, animate, init_func=init,
                                frames=1000, interval=10, blit=False)
 
 # Save as mp4. This requires mplayer or ffmpeg to be installed
-anim.save('video_lorenz.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+anim.save('video_lorenz.mp4', fps=20, extra_args=['-vcodec', 'libx264'])
 
 plt.show()
