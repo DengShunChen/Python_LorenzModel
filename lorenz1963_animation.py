@@ -1,3 +1,4 @@
+#/usr/bin/env python
 import numpy as np
 from scipy import integrate
 
@@ -9,8 +10,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.colors import cnames
 from matplotlib import animation
 
-N_trajectories = 1
-
+N_trajectories = 10
 
 def lorentz_deriv(value, t0, sigma=10., beta=8./3, rho=28.0):
     """Compute the time-derivative of a Lorentz system."""
@@ -87,7 +87,7 @@ ax.set_ylabel('Y')
 ax.set_zlim3d([5, 55])
 ax.set_zlabel('Z')
 
-ax.set_title('Lorenz 1963 Model ')
+ax.set_title('Lorenz 1963 Model')
 
 # instantiate the animator.
 anim = animation.FuncAnimation(fig, animate, init_func=init,
